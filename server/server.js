@@ -80,6 +80,23 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
 });
 
 
+// create the POST request for a new user
+app.post('/api/me', cors(), async (req, res) => {
+  //lastname, firstname, email, sub
+  const newUser = {
+    lastname: req.body.family_name,
+    firstname: req.body.given_name,
+    email: req.body.email,
+    sub: req.body.sub
+  }
+  const result = await db.query(
+    'INSERT INTO users(lastname, firstname, email, sub) VALUES($1, $2, $3, $4) RETURNING *',
+    [newUser.lastname, newUser.firstname, newUser.email, newUser.sub],
+  );
+  console.log(result.rows[0]);
+});
+
+
 
 // console.log that your server is up and running
 app.listen(PORT, () => {
