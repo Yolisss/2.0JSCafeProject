@@ -37,17 +37,29 @@ const HotCoffeeData = () => {
       </table>
       {individualHotCoffee.map((cold, index) => {
         return (
-          <tr key={index}>
-            <td>{cold.title}</td>
-            <td>{cold.description}</td>
-            <td>{cold.ingredients}</td>
-            <td>
-              <img src={cold.image}></img>
-            </td>
-            <td>{cold.id}</td>
-            {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
-            {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
-          </tr>
+          <div>
+            <tr key={index}>
+              <div>
+                <td>{cold.title}</td>
+              </div>
+              <div>
+                <td>{cold.description}</td>
+              </div>
+              <div>
+                <td>{cold.ingredients}</td>
+              </div>
+              <div className="icecoffee-pictures">
+                {" "}
+                <td>
+                  {/* inline style */}
+                  <img src={cold.image} style={{ height: "443px" }}></img>
+                </td>
+                {/* <td>{cold.id}</td> */}
+              </div>
+              {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
+              {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
+            </tr>
+          </div>
         );
       })}
     </div>
