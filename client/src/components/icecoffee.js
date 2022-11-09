@@ -41,8 +41,8 @@ const IceCoffeeData = () => {
             <td>{cold.title}</td>
             <td>{cold.description}</td>
             <td>{cold.ingredients}</td>
-            <td>{cold.image}</td>
-            <td>{cold.id}</td>
+            <img src={cold.image} style={{ height: "443px" }}></img>
+            {/* <td>{cold.id}</td> */}
             {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
             {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
           </tr>

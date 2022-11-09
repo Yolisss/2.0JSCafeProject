@@ -1,12 +1,20 @@
 import React from "react";
 import HotCoffeeData from "../components/hotcoffee";
 import IceCoffeeData from "../components/icecoffee";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Home() {
+  const { isAuthenticated } = useAuth0();
   return (
-    <div>
-      <HotCoffeeData />
-      <IceCoffeeData />
+    <div className="App">
+      {/* //conditional rendering: if this is true, make this appear, if false do nothing  */}
+      {isAuthenticated && (
+        <>
+          <IceCoffeeData />
+          <HotCoffeeData />
+        </>
+      )}
+      <h3> User is {isAuthenticated ? "Logged in" : "Not logged in"} </h3>
     </div>
   );
 }

@@ -92,29 +92,25 @@ app.get("/hotcoffee", (req, res) => {
 //DO NOT TOUCH main route when you log in
 app.post("/api/me", cors(), async (req, res) => {
   const newUser = {
-    lastname: req.body.family_name,
-    firstname: req.body.given_name,
+    name: req.body.name,
     email: req.body.email,
     sub: req.body.sub,
+    picture: req.body.picture,
   };
-  //console.log(newUser);
+  console.log(newUser);
 
   const queryEmail = "SELECT * FROM users WHERE email=$1 LIMIT 1";
   const valuesEmail = [newUser.email];
   const resultsEmail = await db.query(queryEmail, valuesEmail);
-  if (resultsEmail.rows[0]) {
-    console.log(`Thank you ${resultsEmail.rows[0].firstname} for comming back`);
+  console.log(resultsEmail);
+  if (resultsEmail.rows.length > 0) {
+    console.log(`Thank you for comming back`);
   } else {
     const query =
-      "INSERT INTO users(lastname, firstname, email, sub) VALUES($1, $2, $3, $4) RETURNING *";
-    const values = [
-      newUser.lastname,
-      newUser.firstname,
-      newUser.email,
-      newUser.sub,
-    ];
+      "INSERT INTO users( name, email, sub, picture) VALUES($1, $2, $3, $4) RETURNING *";
+    const values = [newUser.name, newUser.email, newUser.sub, newUser.picture];
     const result = await db.query(query, values);
-    console.log(result.rows[0]);
+    console.log(result);
   }
 });
 
