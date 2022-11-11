@@ -3,6 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 const db = require("./db/db-connection.js");
 const fetch = require("node-fetch");
+const router = require("./routes/favdrinksform.js");
 const app = express();
 
 const PORT = 2028;
@@ -27,13 +28,23 @@ app.get("/icecoffee", (req, res) => {
 
 app.get("/hotcoffee", (req, res) => {
   let URL = `https://api.sampleapis.com/coffee/hot`;
-  console.log("Ice Coffee was recieved");
+  console.log("Hot Coffee was recieved");
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
       res.send(data);
     });
 });
+
+//router obj is importing all of the routes from your favdrinkform.js
+//the actual process that running the server is located in the app
+//app has its own routes like line 29
+//router has its own routes but both of them are completely seperate
+//in order for app to use routes from router, thats where app.use comes into play
+//"make sure to use these other routes as well"
+//every routes insider of the router object is going to have a prefix of new drinks
+
+app.use("/newdrinks", router);
 
 // create the POST request
 // app.post('/api/students', cors(), async (req, res) => {

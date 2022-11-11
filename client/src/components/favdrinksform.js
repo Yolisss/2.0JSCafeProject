@@ -1,8 +1,33 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 export default function Favdrinksform() {
+  const [newDrink, setNewDrink] = useState([]);
+
+  //get individuals data table
+  const getDrinks = async () => {
+    const response = await fetch(`http://localhost:4042/contacts`);
+    const data = await response.json();
+    console.log(data);
+    setNewDrink(data);
+  };
+
+  useEffect(() => {
+    getDrinks();
+  }, []);
+
+  //initialistate of the form will be empty
+  const initialState = {
+    id: "",
+    name: "",
+    email: "",
+    phone: "",
+    notes: "",
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
     alert("You have submitted the form");
   };
   return (
@@ -12,7 +37,7 @@ export default function Favdrinksform() {
         <fieldset>
           <label>
             <p>Name</p>
-            <input name="name" />
+            <input type="text" placeholder="name" />
           </label>
           <label>
             <p>Name of Drink</p>
