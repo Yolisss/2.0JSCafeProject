@@ -3,6 +3,7 @@ import HotCoffeeData from "../components/hotcoffee";
 import IceCoffeeData from "../components/icecoffee";
 import { useAuth0 } from "@auth0/auth0-react";
 import Navbarlist from "../components/navbarlist";
+import Favdrinksform from "../components/favdrinksform";
 
 export default function Home() {
   const { isAuthenticated } = useAuth0();
@@ -14,6 +15,7 @@ export default function Home() {
           <Navbarlist />
           <IceCoffeeData />
           <HotCoffeeData />
+          <Favdrinksform />
         </>
       )}
       <h3> User is {isAuthenticated ? "Logged in" : "Not logged in"} </h3>
