@@ -6,24 +6,24 @@ export default function Navbarlist() {
       <nav className="nav">
         <a href="/" className="logo-name">
           JavaSweet Cafe
-          <ul>
-            <li>
-              <a href="/hotcoffee">Hot Coffee</a>
-            </li>
-            <li>
-              <a href="/icecofee">Ice Coffee</a>
-            </li>
-            <li>
-              <a href="/coffeefacts">Coffee Facts</a>
-            </li>
-            <li>
-              <a href="/gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="/mydrinks">My Drinks</a>
-            </li>
-          </ul>
         </a>
+        <ul>
+          <li>
+            <a href="/hotcoffee">Hot Coffee</a>
+          </li>
+          <li>
+            <a href="/icecoffee">Ice Coffee</a>
+          </li>
+          <li>
+            <a href="/coffeefacts">Coffee Facts</a>
+          </li>
+          <li>
+            <a href="/gallery">Gallery</a>
+          </li>
+          <li>
+            <a href="/mydrinks">My Drinks</a>
+          </li>
+        </ul>
       </nav>
     </div>
   );

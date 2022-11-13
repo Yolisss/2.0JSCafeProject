@@ -1,13 +1,9 @@
 import { useState } from "react";
 
 const Form = (props) => {
+  const { initialStudent = { id: null, firstname: "", lastname: "" } } = props;
 
-  const {initialStudent = {id: null, 
-                          firstname: "", 
-                        lastname: ""}} = props;
-
-
-  // This is the oroginal State with not initial student 
+  // This is the oroginal State with not initial student
   const [student, setStudent] = useState(initialStudent);
 
   //create functions that handle the event of the user typing into the form
@@ -37,30 +33,29 @@ const Form = (props) => {
       });
   };
 
-    //A function to handle the Update request
-    const updateStudent = (existingStudent) =>{
-      return fetch(`http://localhost:8080/api/students/${existingStudent.id}`, {
-          method: 'PUT',
-          headers: {'Content-Type': 'application/json'}, 
-          body: JSON.stringify(existingStudent)
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-          console.log("From put request ", data);
-          props.saveStudent(data);
+  //A function to handle the Update request
+  const updateStudent = (existingStudent) => {
+    return fetch(`http://localhost:8080/api/students/${existingStudent.id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(existingStudent),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log("From put request ", data);
+        props.saveStudent(data);
       });
-
-  }
-
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(student.id){
+    if (student.id) {
       updateStudent(student);
-    } else{
+    } else {
       postStudent(student);
     }
-    
   };
 
   return (
@@ -85,7 +80,7 @@ const Form = (props) => {
           onChange={handleLastnameChange}
         />
       </fieldset>
-      <button type="submit">{!student.id ? "ADD": "SAVE"}</button>
+      <button type="submit">{!student.id ? "ADD" : "SAVE"}</button>
     </form>
   );
 };
