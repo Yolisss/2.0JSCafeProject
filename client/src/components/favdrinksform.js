@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function Favdrinksform() {
   const [newDrink, setNewDrink] = useState([]);
 
-  //get individuals data table
+  //get new_drinks data table
   const getDrinks = async () => {
     const response = await fetch(`http://localhost:4042/contacts`);
     const data = await response.json();
@@ -19,10 +19,10 @@ export default function Favdrinksform() {
   //initialistate of the form will be empty
   const initialState = {
     id: "",
-    name: "",
-    email: "",
-    phone: "",
-    notes: "",
+    title: "",
+    description: "",
+    ingredients: "",
+    image: "",
   };
 
   const handleSubmit = (event) => {
