@@ -28,23 +28,17 @@ router.post("/", async (req, res) => {
   const drinks = {
     //server targetting these values
     id: req.body.id,
-    name: req.body.title,
-    email: req.body.description,
-    phone: req.body.ingredients,
-    notes: req.body.image,
+    title: req.body.title,
+    description: req.body.description,
+    ingredients: req.body.ingredients,
+    image: req.body.image,
   };
   console.log(drinks);
   //try is inserting it into our db
   try {
-    const createdDrinks = await db.one(
-      `INSERT INTO new_drinks(id, title, description, ingredients, image) VALUES($1, $2, $3, $4, $5) RETURNING *`,
-      [
-        drinks.id,
-        drinks.title,
-        drinks.description,
-        drinks.ingredients,
-        drinks.image,
-      ]
+    const createdDrinks = await db.query(
+      `INSERT INTO new_drinks(title, description, ingredients, image) VALUES($1, $2, $3, $4) RETURNING *`,
+      [drinks.title, drinks.description, drinks.ingredients, drinks.image]
     );
     console.log(createdDrinks);
     //it'll be added to database

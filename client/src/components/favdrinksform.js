@@ -117,6 +117,33 @@ export default function Favdrinksform() {
   //     alert("You have submitted the form");
   return (
     <>
+      {newDrink.map((newDrink, index) => {
+        return (
+          <div>
+            <tr key={index}>
+              <div>
+                <td>{newDrink.title}</td>
+              </div>
+              <div>
+                <td>{newDrink.description}</td>
+              </div>
+              <div>
+                <td>{newDrink.ingredients}</td>
+              </div>
+              <div className="icecoffee-pictures">
+                {" "}
+                <td>
+                  {/* inline style */}
+                  <img src={newDrink.image} style={{ height: "443px" }}></img>
+                </td>
+                {/* <td>{cold.id}</td> */}
+              </div>
+              {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
+              {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
+            </tr>
+          </div>
+        );
+      })}
       <div className="addDrink">
         <header className="add-drink-header">Add a new Drink</header>
         <form id="add-drink" action="#" onSubmit={handleAddDrink}>
