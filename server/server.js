@@ -41,6 +41,16 @@ app.get("/hotcoffee", (req, res) => {
     });
 });
 
+app.get("/coffeefacts", (req, res) => {
+  let URL = `https://api.fungenerators.com`;
+  console.log("Hot facts was recieved");
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      res.send(data);
+    });
+});
+
 //router obj is importing all of the routes from your favdrinkform.js
 //the actual process that running the server is located in the app
 //app has its own routes like line 29
