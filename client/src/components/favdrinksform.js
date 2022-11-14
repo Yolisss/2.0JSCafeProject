@@ -44,7 +44,7 @@ export default function Favdrinksform() {
 
   //get new_drinks data table
   const getDrink = async () => {
-    const response = await fetch(`http://localhost:2028/newdrinks`);
+    const response = await fetch(`/newdrinks`);
     const data = await response.json();
     console.log(data);
     setNewDrink(data);
@@ -97,12 +97,9 @@ export default function Favdrinksform() {
   //delete individual handler
   const handleDeleteContact = async (deleteId) => {
     //
-    const response = await fetch(
-      `http://localhost:2028/newdrinks/${deleteId}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const response = await fetch(`/newdrinks/${deleteId}`, {
+      method: "DELETE",
+    });
     await response.json();
     const deleteDrinkFunction = newDrink.filter(
       (drink) => newDrink.id !== deleteId

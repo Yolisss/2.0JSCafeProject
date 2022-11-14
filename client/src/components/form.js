@@ -35,7 +35,7 @@ const Form = (props) => {
 
   //A function to handle the Update request
   const updateStudent = (existingStudent) => {
-    return fetch(`http://localhost:8080/api/students/${existingStudent.id}`, {
+    return fetch(`/api/students/${existingStudent.id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(existingStudent),

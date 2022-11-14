@@ -12,7 +12,7 @@ const IceCoffeeData = () => {
 
   //get individuals data table
   const getIceCoffee = async () => {
-    const response = await fetch(`http://localhost:2028/icecoffee`);
+    const response = await fetch(`/icecoffee`);
     const data = await response.json();
     console.log(data);
     setIndividualsIceCoffee(data);

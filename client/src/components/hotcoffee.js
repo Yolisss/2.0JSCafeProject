@@ -48,7 +48,7 @@ const HotCoffeeData = () => {
               <div>
                 <td>{cold.ingredients}</td>
               </div>
-              <div className="icecoffee-pictures">
+              <div className="hotcoffee-pictures">
                 {" "}
                 <td>
                   {/* inline style */}
