@@ -79,7 +79,7 @@ export default function Favdrinksform() {
     };
     console.log(newDrink);
     //New Indiv data will be sent to server and new data will be posted
-    const response = await fetch("http://localhost:2028/newdrinks", {
+    const response = await fetch("/newdrinks", {
       method: "POST",
       headers: {
         Accept: "application/json",

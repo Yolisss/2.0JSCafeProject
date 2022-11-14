@@ -4,9 +4,13 @@ require("dotenv").config();
 const db = require("./db/db-connection.js");
 const fetch = require("node-fetch");
 const router = require("./routes/favdrinksform.js");
+const path = require("path");
 const app = express();
 
-const PORT = 2028;
+const REACT_BUILD_DIR = path.join(__dirname, "..", "client", "build");
+app.use(express.static(REACT_BUILD_DIR));
+
+const PORT = process.env.PORT || 2028;
 app.use(cors());
 app.use(express.json());
 

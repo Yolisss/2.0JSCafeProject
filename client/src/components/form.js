@@ -19,7 +19,7 @@ const Form = (props) => {
 
   //A function to handle the post request
   const postStudent = (newStudent) => {
-    return fetch("http://localhost:8080/api/students", {
+    return fetch("/api/students", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newStudent),

@@ -8,6 +8,7 @@
     "start": "nodemon server.js",
     "server": "nodemon server.js"
   },
+  "proxy": "http://localhost:2028",
   "author": "",
   "license": "ISC",
   "dependencies": {
