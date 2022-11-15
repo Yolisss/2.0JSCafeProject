@@ -6,37 +6,28 @@ export default function Coffeefacts() {
 
   //get new_drinks data table
   const getFact = async () => {
+    //fetching info from table
     const response = await fetch(`/coffeefacts`);
     const data = await response.json();
     console.log(data);
-    setCoffeeFact(data);
+    //math floor is just used to let you use math.random
+    let random = Math.floor(Math.random() * data.length);
+    //for the data your recieving, you want to randomize it
+    //setting current coffee fact to random coffee fact
+    setCoffeeFact(data[random]);
   };
 
   useEffect(() => {
     getFact();
   }, []);
 
-  //initialistate of the form will be empty
-  const initialState = {
-    id: "",
-    fact: "",
-  };
   return (
     <>
-      {coffeeFact.map((coffeeFact, index) => {
-        return (
-          <div>
-            <tr key={index}>
-              <div>
-                <td>{coffeeFact.fact}</td>
-              </div>
-              <div>
-                <td>{coffeeFact.description}</td>
-              </div>
-            </tr>
-          </div>
-        );
-      })}
+      <div className="card">
+        <p>{coffeeFact.fact}</p>
+        <p>{coffeeFact.description}</p>
+      </div>
+      <button onClick={getFact}>Get Coffee Fact</button>
     </>
   );
 }
