@@ -9,6 +9,7 @@ import Favdrinksform from "./components/favdrinksform";
 import HotCoffeeData from "./components/hotcoffee";
 import IceCoffeeData from "./components/icecoffee";
 import Navbarlist from "./components/navbarlist";
+import Coffeefacts from "./components/coffeefacts";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -40,6 +41,7 @@ function App() {
               {/* //this will allow to change the nav bar state  */}
               <Route path="/hotcoffee" element={<HotCoffeeData />} />
               <Route path="/icecoffee" element={<IceCoffeeData />} />
+              <Route path="/coffeefacts" element={<Coffeefacts />} />
               <Route path="/mydrinks" element={<Favdrinksform />} />
             </>
           )}

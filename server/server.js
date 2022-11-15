@@ -3,7 +3,11 @@ const cors = require("cors");
 require("dotenv").config();
 const db = require("./db/db-connection.js");
 const fetch = require("node-fetch");
-const router = require("./routes/favdrinksform.js");
+//would be the router from favdrinksform.js
+//defining routers
+//imported router from another file and assigned it to this var
+const coffeeFactsRouter = require("./routes/coffeefacts.js");
+const favDrinksRouter = require("./routes/favdrinksform.js");
 const path = require("path");
 const app = express();
 
@@ -41,16 +45,6 @@ app.get("/hotcoffee", (req, res) => {
     });
 });
 
-app.get("/coffeefacts", (req, res) => {
-  let URL = `https://api.fungenerators.com`;
-  console.log("Hot facts was recieved");
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      res.send(data);
-    });
-});
-
 //router obj is importing all of the routes from your favdrinkform.js
 //the actual process that running the server is located in the app
 //app has its own routes like line 29
@@ -59,8 +53,12 @@ app.get("/coffeefacts", (req, res) => {
 //"make sure to use these other routes as well"
 //every routes insider of the router object is going to have a prefix of new drinks
 
-app.use("/newdrinks", router);
+//USING ROUTER, used in express
+//lets you incorporte another router in you main app
 
+app.use("/newdrinks", favDrinksRouter);
+
+app.use("/coffeefacts", coffeeFactsRouter);
 // create the POST request
 // app.post('/api/students', cors(), async (req, res) => {
 //   const newUser = {

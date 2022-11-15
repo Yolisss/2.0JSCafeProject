@@ -10,9 +10,9 @@ const router = express.Router();
 //within it we are using a try/catch block
 router.get("/", async function (req, res) {
   try {
-    const drinks = await db.query("SELECT * FROM coffee_facts ORDER BY id");
+    const fact = await db.query("SELECT * FROM coffee_facts ORDER BY id");
     //send the data back to the server based on the species that came from the db
-    res.send(drinks.rows);
+    res.send(fact.rows);
     //catch unexpected errors
     //console log err
     //and send response with a 400 error to client
@@ -24,18 +24,19 @@ router.get("/", async function (req, res) {
 
 //"/" main part where you're storing the information
 //post request
-router.post("/", async (req, res) => {
-  const drinks = {
+router.post("/coffeefact", async (req, res) => {
+  const coffeeFact = {
     //server targetting these values
     id: req.body.id,
     fact: req.body.fact,
+    description: req.body.description,
   };
-  console.log(drinks);
+  console.log(coffeeFact);
   //try is inserting it into our db
   try {
     const createdDrinkFact = await db.query(
       `INSERT INTO coffee_facts(fact) VALUES($1) RETURNING *`,
-      [drinks.fact]
+      [coffeeFact.fact, coffeeFact.description]
     );
     console.log(createdDrinkFact);
     //it'll be added to database
@@ -56,7 +57,7 @@ router.delete("/:id", async (req, res) => {
   const drinksId = req.params.id;
   try {
     await db.none("DELETE FROM coffee_facts WHERE id=$1", [drinksId]);
-    res.send({ status: "sucess" });
+    res.send({ status: "success" });
   } catch (e) {
     //if you don't have it, bring back an error
     return res.status(500).json({ e });
