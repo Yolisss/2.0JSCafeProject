@@ -3,7 +3,11 @@ const cors = require("cors");
 require("dotenv").config();
 const db = require("./db/db-connection.js");
 const fetch = require("node-fetch");
-const router = require("./routes/favdrinksform.js");
+//would be the router from favdrinksform.js
+//defining routers
+//imported router from another file and assigned it to this var
+const coffeeFactsRouter = require("./routes/coffeefacts.js");
+const favDrinksRouter = require("./routes/favdrinksform.js");
 const path = require("path");
 const app = express();
 
@@ -49,8 +53,12 @@ app.get("/hotcoffee", (req, res) => {
 //"make sure to use these other routes as well"
 //every routes insider of the router object is going to have a prefix of new drinks
 
-app.use("/newdrinks", router);
+//USING ROUTER, used in express
+//lets you incorporte another router in you main app
 
+app.use("/newdrinks", favDrinksRouter);
+
+app.use("/coffeefacts", coffeeFactsRouter);
 // create the POST request
 // app.post('/api/students', cors(), async (req, res) => {
 //   const newUser = {
