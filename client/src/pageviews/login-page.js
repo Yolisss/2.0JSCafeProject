@@ -5,8 +5,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Navbarlist from "../components/navbarlist";
 import Favdrinksform from "../components/favdrinksform";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Home({ navChoice }) {
+export default function Home({ navChoice, user }) {
   const { isAuthenticated } = useAuth0();
 
   //navChoice is state
@@ -16,8 +17,13 @@ export default function Home({ navChoice }) {
   // const [navChoice, setNavChoice] = useState();
   return (
     <div className="App">
-     
-      <h3> User is {isAuthenticated ? "Logged in" : "Not logged in"} </h3>
+      {!user ? (
+        <span>Hello from Techtonica</span>
+      ) : (
+        <span>
+          Hello <Link to="api/me">{user.name}</Link>
+        </span>
+      )}
     </div>
   );
 }

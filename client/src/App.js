@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./components/nav-bar";
+import SiteHeader from "./components/nav-bar";
 import Profile from "./components/profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "./components/loading";
@@ -20,18 +20,9 @@ function App() {
 
   return (
     <div id="app" className="d-flex flex-column h-100">
-      <NavBar />
+      <SiteHeader />
+      <div>{user && <Navbarlist />}</div>
       <div className="container flex-grow-1">
-        {!user ? (
-          <span>Hello from Techtonica</span>
-        ) : (
-          <>
-            <span>
-              Hello <Link to="api/me">{user.name}</Link>
-            </span>
-            <Navbarlist />
-          </>
-        )}
         <Routes>
           <Route path="/" element={<Home user={user} />} />
           {/* //conditional rendering: if this is true, make this appear, if false do nothing  */}

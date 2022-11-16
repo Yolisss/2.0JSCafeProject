@@ -88,7 +88,7 @@ export default function Favdrinksform() {
       body: JSON.stringify(newDrink),
     });
     const content = await response.json();
-    setNewDrink([...newDrink, content]);
+    setNewDrink([newDrink, content]);
     //calling a specific part of your reducer type
     //whenever we press submit, all the values in the boxes will be cleared
     dispatch({ type: "clearForm" });
