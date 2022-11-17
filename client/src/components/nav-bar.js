@@ -2,7 +2,7 @@ import React from "react";
 
 import AuthNav from "./auth-nav";
 
-const NavBar = () => {
+const SiteHeader = () => {
   return (
     <div className="nav-container mb-3">
       <nav className="navbar navbar-expand-md navbar-light bg-light">
@@ -15,4 +15,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default SiteHeader;

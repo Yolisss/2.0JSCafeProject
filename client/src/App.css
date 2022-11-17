@@ -121,3 +121,12 @@
   display: flex;
   justify-content: space-evenly; */
 }
+
+.logoutbutton,
+.loginbutton {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}

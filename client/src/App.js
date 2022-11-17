@@ -20,8 +20,9 @@ function App() {
 
   return (
     <div id="app" className="d-flex flex-column h-100">
-      <SiteHeader />
-      <div>{user && <Navbarlist />}</div>
+      <div>
+        <Navbarlist />
+      </div>
       <div className="container flex-grow-1">
         <Routes>
           <Route path="/" element={<Home user={user} />} />
