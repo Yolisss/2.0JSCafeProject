@@ -108,3 +108,16 @@
   margin-left: 250px;
   margin-right: 250px;
 }
+
+.hotcoffees {
+  text-align: center;
+  columns: 100px 1;
+  margin-left: 100px;
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  /* list-style: none;
+  display: flex;
+  justify-content: space-evenly; */
+}
