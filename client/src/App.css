@@ -101,3 +101,10 @@
   display: flex;
   justify-content: space-evenly; */
 }
+
+.coffeefact {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
