@@ -4,10 +4,14 @@ export default function Navbarlist() {
   return (
     <div>
       <nav className="nav">
-        <a href="/" className="logo-name">
-          JavaSweet Cafe
-        </a>
-        <ul>
+        {/* first pair letting you know you're working with js
+        second curly brace is letting it know its an object */}
+        <ul className="navflex">
+          <li>
+            <a href="/home" className="logo-name">
+              Home
+            </a>
+          </li>
           <li>
             <a href="/hotcoffee">Hot Coffee</a>
           </li>

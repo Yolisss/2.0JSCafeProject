@@ -18,11 +18,22 @@ export default function Home({ navChoice, user }) {
   return (
     <div className="App">
       {!user ? (
-        <span>Hello from Techtonica</span>
+        <div className="greetings">
+          <span>JavaSweet Cafe</span>
+          <div className="greetingsimage">
+            <img
+              src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"
+              alt="Logo"
+              style={{ height: "443px" }}
+            />
+          </div>
+        </div>
       ) : (
-        <span>
-          Hello <Link to="api/me">{user.name}</Link>
-        </span>
+        <div>
+          <span>
+            Hello <Link to="api/me">{user.name}</Link>
+          </span>
+        </div>
       )}
     </div>
   );

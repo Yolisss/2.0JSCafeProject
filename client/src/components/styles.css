@@ -19,3 +19,8 @@ body {
 .nav a {
   color: inherit;
 }
+
+.navflex {
+  display: flex;
+  flex-direction: row;
+}
