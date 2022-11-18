@@ -58,11 +58,15 @@ router.delete("/:id", async (req, res) => {
   //if you find id within the function, delete it
   const drinksId = req.params.id;
   try {
-    await db.none("DELETE FROM new_drinks WHERE id=$1", [drinksId]);
-    res.send({ status: "sucess" });
+    //.any .none helpful functions that have specific meaning
+    //and if you don't know what are the meanings are for this
+    //function, don't use it
+    //recommended, just use db.query
+    await db.query("DELETE FROM new_drinks WHERE id=$1", [drinksId]);
+    res.send({ status: "success" });
   } catch (e) {
     //if you don't have it, bring back an error
-    return res.status(500).json({ e });
+    return res.status(404).json({ e });
   }
 });
 

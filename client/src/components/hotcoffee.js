@@ -24,7 +24,7 @@ const HotCoffeeData = () => {
   return (
     <div className="hotcoffees">
       <h2> List of Hot Coffees</h2>
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>Title</th>
@@ -33,32 +33,22 @@ const HotCoffeeData = () => {
             <th>Images</th>
             <th>Id</th>
           </tr>
-        </thead>
-      </table>
+        </thead> */}
+      {/* </table> */}
       {individualHotCoffee.map((cold, index) => {
         return (
           <div>
-            <tr key={index}>
-              <div>
-                <td>{cold.title}</td>
-              </div>
-              <div>
-                <td>{cold.description}</td>
-              </div>
-              <div>
-                <td>{cold.ingredients}</td>
-              </div>
-              <div className="hotcoffee-pictures">
-                {" "}
-                <td>
-                  {/* inline style */}
-                  <img src={cold.image} style={{ height: "443px" }}></img>
-                </td>
-                {/* <td>{cold.id}</td> */}
-              </div>
-              {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
-              {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
-            </tr>
+            <div className="hotcoffees">
+              {cold.title}
+              {cold.description}
+              {cold.ingredients}
+
+              {/* inline style */}
+              <img src={cold.image} style={{ height: "443px" }}></img>
+              {/* <td>{cold.id}</td> */}
+            </div>
+            {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
+            {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
           </div>
         );
       })}

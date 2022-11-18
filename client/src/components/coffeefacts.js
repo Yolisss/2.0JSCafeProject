@@ -23,11 +23,12 @@ export default function Coffeefacts() {
 
   return (
     <>
-      <div className="card">
+      <div className="coffeefact">
         <p>{coffeeFact.fact}</p>
         <p>{coffeeFact.description}</p>
+        <br></br>
+        <button onClick={getFact}>Get Coffee Fact</button>
       </div>
-      <button onClick={getFact}>Get Coffee Fact</button>
     </>
   );
 }

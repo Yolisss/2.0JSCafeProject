@@ -95,7 +95,7 @@ export default function Favdrinksform() {
   };
 
   //delete individual handler
-  const handleDeleteContact = async (deleteId) => {
+  const handleDeleteDrink = async (deleteId) => {
     //
     const response = await fetch(`/newdrinks/${deleteId}`, {
       method: "DELETE",
@@ -127,6 +127,9 @@ export default function Favdrinksform() {
               <div>
                 <td>{newDrink.ingredients}</td>
               </div>
+              <div>
+                <td>{newDrink.id}</td>
+              </div>
               <div className="icecoffee-pictures">
                 {" "}
                 <td>
@@ -138,6 +141,13 @@ export default function Favdrinksform() {
               {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
               {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
             </tr>
+            <button // src={deleteIcon}
+              className="trash"
+              alt="trash"
+              onClick={() => handleDeleteDrink(newDrink.id)}
+            >
+              Delete Drink
+            </button>
           </div>
         );
       })}

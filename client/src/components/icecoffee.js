@@ -22,30 +22,31 @@ const IceCoffeeData = () => {
     getIceCoffee();
   }, []);
   return (
-    <div className="icecoffees">
-      <h2> List of Ice Coffees</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Ingredients</th>
-            <th>Images</th>
-            <th>Id</th>
-          </tr>
-        </thead>
-      </table>
+    <div>
+      <div className="icemaintitle">
+        <h2> List of Ice Coffees</h2>
+      </div>
+      {/* <div>
+        <div className="icetitlenames">
+          <div className="titlename">Title</div>
+          <div>Description</div>
+          <div>Ingredients</div>
+          <div>Images</div>
+        </div>
+      </div> */}
       {individualIceCoffee.map((cold, index) => {
         return (
-          <tr key={index}>
-            <td>{cold.title}</td>
-            <td>{cold.description}</td>
-            <td>{cold.ingredients}</td>
+          <div className="icecoffees" key={index}>
+            <div>{cold.title}</div>
+            <br></br>
+            <div>{cold.description}</div>
+            <br></br>
+            <div>{cold.ingredients}</div>
             <img src={cold.image} style={{ height: "443px" }}></img>
             {/* <td>{cold.id}</td> */}
             {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
             {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
-          </tr>
+          </div>
         );
       })}
     </div>

@@ -44,3 +44,89 @@
   height: auto;
   width: auto;
 }
+
+.greetings {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.greetingsimage {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.authButton {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.navflex {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-style: solid;
+}
+
+.icemaintitle {
+  text-align: center;
+  margin: 75px 50px;
+}
+
+.icetitlenames {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icecoffees {
+  columns: 100px 3;
+  margin-left: 300px;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  /* list-style: none;
+  display: flex;
+  justify-content: space-evenly; */
+}
+
+.coffeefact {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.hotcoffees {
+  text-align: center;
+  columns: 100px 1;
+  margin-left: 100px;
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  /* list-style: none;
+  display: flex;
+  justify-content: space-evenly; */
+}
+
+.logoutbutton,
+.loginbutton {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
