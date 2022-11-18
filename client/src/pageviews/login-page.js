@@ -7,6 +7,7 @@ import Favdrinksform from "../components/favdrinksform";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import VideoHolder from "../components/videoholder";
+import LogoutButton from "../components/logout-button";
 
 export default function Home({ navChoice, user }) {
   const { isAuthenticated } = useAuth0();
@@ -20,7 +21,6 @@ export default function Home({ navChoice, user }) {
     <div className="App">
       {!user ? (
         <div className="greetings">
-          <span>JavaSweet Cafe</span>
           <div>
             <VideoHolder />
           </div>
