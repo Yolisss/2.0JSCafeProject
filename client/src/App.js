@@ -18,6 +18,7 @@ function App() {
     return <Loading />;
   }
 
+  //navbarlist also includes log out button
   return (
     <div id="app" className="d-flex flex-column h-100">
       <div>
