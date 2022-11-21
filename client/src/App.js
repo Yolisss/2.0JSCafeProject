@@ -10,6 +10,7 @@ import HotCoffeeData from "./components/hotcoffee";
 import IceCoffeeData from "./components/icecoffee";
 import Navbarlist from "./components/navbarlist";
 import Coffeefacts from "./components/coffeefacts";
+import { Sliderdata } from "./components/sliderdata";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -26,7 +27,7 @@ function App() {
       </div>
       <div className="container flex-grow-1">
         <Routes>
-          <Route path="/" element={<Home user={user} />} />
+          <Route path="/" element={<Home user={user} slides={Sliderdata} />} />
           {/* //conditional rendering: if this is true, make this appear, if false do nothing  */}
 
           {user && (
