@@ -1,19 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.videoholder {
-  width: 100%;
-  height: 100vh;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .App {
   text-align: center;
 }
@@ -146,3 +130,122 @@ video {
   cursor: pointer;
   text-decoration: underline;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.videoholder {
+  width: 100%;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 10px rgb(0 0 0 / 50%), 0 0 30px rgb(0 0 0 / 90%);
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+/* .carousel {
+  position: relative;
+}
+.carousel__item {
+  height: 300px;
+  background: grey;
+  padding: 1em;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  display: none;
+}
+
+.carousel__item--selected {
+  display: block;
+}
+
+.carousel__nav {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: grey;
+  text-align: center;
+}
+
+.carousel__button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 50%;
+  /* //gives space between button */
+/* margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel__button--selected {
+  background-color: rgb(255, 255, 255, 0.5);
+} */

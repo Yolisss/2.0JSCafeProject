@@ -15,7 +15,7 @@ export default function Navbarlist() {
           {user && (
             <>
               <li>
-                <a href="/home" className="logo-name">
+                <a href="/" className="logo-name">
                   Home
                 </a>
               </li>

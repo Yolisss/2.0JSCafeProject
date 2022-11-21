@@ -7,6 +7,9 @@ import Favdrinksform from "../components/favdrinksform";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import VideoHolder from "../components/videoholder";
+import LogoutButton from "../components/logout-button";
+import Imageslider from "../components/imageslider";
+import { Sliderdata } from "../components/sliderdata";
 
 export default function Home({ navChoice, user }) {
   const { isAuthenticated } = useAuth0();
@@ -20,7 +23,6 @@ export default function Home({ navChoice, user }) {
     <div className="App">
       {!user ? (
         <div className="greetings">
-          <span>JavaSweet Cafe</span>
           <div>
             <VideoHolder />
           </div>
@@ -30,11 +32,25 @@ export default function Home({ navChoice, user }) {
           <span>
             Hello <Link to="api/me">{user.name}</Link>
           </span>
+          <div>
+            <Imageslider slides={Sliderdata} />
+          </div>
         </div>
       )}
     </div>
   );
 }
+
+/* <div class="carousel">
+  <div class="carousel__item">Content #1</div>
+  <div class="carousel__item carousel__item--selected">Content #2</div>
+  <div class="carousel__item">Content #3</div>
+  <div class="carousel__nav">
+    <span class="carousel__button"></span>
+    <span class="carousel__button carousel__button--selected"></span>
+    <span class="carousel__button"></span>
+  </div>
+</div>; */
 
 //  <div className="greetingsimage">
 //    <img
