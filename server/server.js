@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 });
 
 // create the get request
-app.get("/icecoffee", (req, res) => {
+app.get("/icecoffeefacts", (req, res) => {
   let URL = `https://api.sampleapis.com/coffee/iced`;
   console.log("Ice Coffee was recieved");
   fetch(URL)
