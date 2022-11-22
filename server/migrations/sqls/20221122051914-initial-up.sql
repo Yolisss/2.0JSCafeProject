@@ -21,8 +21,3 @@ CREATE TABLE users (
 );
 
 
-
-SELECT pg_catalog.setval('new_drinks_id_seq', 21, true);
-
-SELECT pg_catalog.setval('users_id_seq', 13, true);
-
