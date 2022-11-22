@@ -35,31 +35,26 @@ const HotCoffeeData = () => {
           </tr>
         </thead> */}
       {/* </table> */}
-      {individualHotCoffee.map((cold, index) => {
-        return (
-          <div>
-            <div className="hotcoffees" class="cards">
-              <div class="card">
-                <div class="card__content">
-                  {cold.title}
-                  <p>{cold.description}</p>
-                  <p>{cold.ingredients}</p>
-
-                  {/* inline style */}
-                  <div>
-                    <img
-                      src={cold.image}
-                      class="card__image"
-                      style={{ height: "443px" }}
-                    ></img>
-                  </div>
+      <div className="card_grid">
+        {individualHotCoffee.map((cold, index) => {
+          return (
+            <div>
+              <div className="coffee_card">
+                <div class="container">{cold.title}</div>
+                <div className="card_image_container">
+                  <img src={cold.image} className="card_image"></img>
                 </div>
+                <p>{cold.description}</p>
+                <p>{cold.ingredients}</p>
+
+                {/* inline style */}
+                {/* <td>{cold.id}</td> */}
               </div>
-              {/* <td>{cold.id}</td> */}
+              <br></br>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

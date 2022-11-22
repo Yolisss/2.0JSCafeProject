@@ -41,18 +41,57 @@ body {
   background-color: #cfbc9f;
 }
 
-.cards {
-  margin: 0 auto;
-  max-width: 1000px;
+/* .card {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  font-family: "Times New Roman", Times, serif;
+  grid-template-columns: 300px;
+  grid-template-rows: auto;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 20px;
+  background: rgb(124, 149, 120);
+  text-align: center;
+} */
+.hotcoffees {
+  padding: 25px;
 }
 
-.card {
-  box-shadow: 0 0 3 rgba(0, 0, 0, 0.1);
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: 1fr;
 }
+
+.coffee_card {
+  background-color: antiquewhite;
+  padding: 10px;
+  border: 1px solid #9c7f51;
+  text-align: center;
+  /* height: 200px;
+  width: 200px; */
+}
+.card_image {
+  max-height: 120px;
+  /*object-fit: fill;
+  margin: auto;
+  justify-content: center; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .card_image_container {
+  background-color: green;
+  justify-content: center;
+  width: 100%;
+} */
+
+/*
+.card-text {
+  grid-area: text;
+  justify-content: center;
+} */
 
 * {
   font-style: italic;
@@ -125,6 +164,7 @@ body {
 .navlist1 {
   text-align: center;
   padding-top: 40px;
+  color: black;
 }
 .navflex {
   text-align: center;
@@ -176,7 +216,7 @@ body {
   border-spacing: 5px 1rem;
 }
 
-.hotcoffees {
+/* .hotcoffees {
   text-align: center;
   columns: 100px 1;
   margin-left: 100px;
@@ -187,7 +227,6 @@ body {
   /* list-style: none;
   display: flex;
   justify-content: space-evenly; */
-}
 
 .logoutbutton,
 .loginbutton {
