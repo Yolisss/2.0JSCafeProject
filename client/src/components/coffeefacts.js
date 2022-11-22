@@ -23,6 +23,7 @@ export default function Coffeefacts() {
 
   return (
     <>
+      <div className="coffeefacttitle">Did you know?</div>
       <div className="coffeefact">
         <p>{coffeeFact.fact}</p>
         <p>{coffeeFact.description}</p>

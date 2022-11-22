@@ -38,17 +38,25 @@ const HotCoffeeData = () => {
       {individualHotCoffee.map((cold, index) => {
         return (
           <div>
-            <div className="hotcoffees">
-              {cold.title}
-              {cold.description}
-              {cold.ingredients}
+            <div className="hotcoffees" class="cards">
+              <div class="card">
+                <div class="card__content">
+                  {cold.title}
+                  <p>{cold.description}</p>
+                  <p>{cold.ingredients}</p>
 
-              {/* inline style */}
-              <img src={cold.image} style={{ height: "443px" }}></img>
+                  {/* inline style */}
+                  <div>
+                    <img
+                      src={cold.image}
+                      class="card__image"
+                      style={{ height: "443px" }}
+                    ></img>
+                  </div>
+                </div>
+              </div>
               {/* <td>{cold.id}</td> */}
             </div>
-            {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
-            {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
           </div>
         );
       })}

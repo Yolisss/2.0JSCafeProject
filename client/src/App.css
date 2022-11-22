@@ -37,12 +37,62 @@
   }
 }
 
+body {
+  background-color: #cfbc9f;
+}
+
+.cards {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.card {
+  box-shadow: 0 0 3 rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-style: italic;
+}
+
+.adddrink {
+  display: center;
+  margin-left: 220px;
+}
+
+.hotcoffeecard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drinkform {
+  display: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: center;
+}
+
+.js-logo {
+  height: 100px;
+  padding-bottom: 30px;
+}
+
+.text-intro {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .icecoffee-pictures {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: auto;
   width: auto;
+  padding: 200px;
 }
 
 .greetings {
@@ -68,15 +118,25 @@
   margin-left: 80px;
 }
 
+.nav {
+  margin-top: 80px;
+}
+
+.navlist1 {
+  text-align: center;
+  padding-top: 40px;
+}
 .navflex {
+  text-align: center;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   margin-left: 50px;
   margin-right: 50px;
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 30px;
   border-style: solid;
+  color: #9c7f51;
 }
 
 .icemaintitle {
@@ -102,20 +162,27 @@
   justify-content: space-evenly; */
 }
 
+.coffeefacttitle {
+  margin-top: 100px;
+  text-align: center;
+}
 .coffeefact {
+  position: relative;
   text-align: center;
   margin-top: 100px;
   margin-left: 250px;
   margin-right: 250px;
+  border-style: solid;
+  border-spacing: 5px 1rem;
 }
 
 .hotcoffees {
   text-align: center;
   columns: 100px 1;
   margin-left: 100px;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-right: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   padding-left: 100px;
   /* list-style: none;
   display: flex;
@@ -206,46 +273,3 @@ video {
   transition-duration: 1s;
   transform: scale(1.08);
 }
-
-/* .carousel {
-  position: relative;
-}
-.carousel__item {
-  height: 300px;
-  background: grey;
-  padding: 1em;
-  font-family: cursive;
-  font-weight: bold;
-  font-size: 2em;
-  color: white;
-  display: none;
-}
-
-.carousel__item--selected {
-  display: block;
-}
-
-.carousel__nav {
-  width: 100%;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: grey;
-  text-align: center;
-}
-
-.carousel__button {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  background: rgb(255, 255, 255, 0.2);
-  border-radius: 50%;
-  /* //gives space between button */
-/* margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel__button--selected {
-  background-color: rgb(255, 255, 255, 0.5);
-} */
