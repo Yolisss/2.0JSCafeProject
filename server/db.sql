@@ -26,7 +26,8 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.coffee_facts (
     id integer NOT NULL,
-    fact text
+    fact text,
+    description text
 );
 
 
@@ -55,7 +56,7 @@ CREATE TABLE public.new_drinks (
     title text,
     description text,
     ingredients text,
-    image character varying
+    image text
 );
 
 
@@ -108,37 +109,51 @@ ALTER TABLE public.users ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 -- Data for Name: coffee_facts; Type: TABLE DATA; Schema: public; Owner: yolismazacarias
 --
 
+COPY public.coffee_facts (id, fact, description) FROM stdin;
+2	The Netherlands Consume The Most Coffee	According to a 2020 study, the Netherlands were said to consume the most coffee per capita with a whopping 8.3 kilograms!\n\nThey were followed by Finland at 7.8 and Sweden at 7.6. Despite our best efforts, the UK didn’t even rank in the top fifteen for the most coffee addicted countries!\n\n
+3	Coffee Beans Aren't Beans	Contrary to the name, a coffee bean isn’t actually a bean.\n\nRather, it’s the pit (or seed) that’s found inside the coffee cherry. The bean is removed from the fruit as part of the harvest process.\n\nBecause of their shape and size, they’re now commonly referred to as a bean but, assuming the conditions are right, you could plant one and it could grow into a whole new coffee plant.
+4	There's A Coffee Made From Poo...	We know how that sounds, but bear with us!\n\nOriginating from Indonesia, the Kopi Luwak is one of the most sought after coffees in the world. It’s produced with the help of the adorable palm civet who eat the coffee cherries and then… pass the beans.\n\nThe unique fermentation process that occurs as the beans travel through the civet’s digestive tract is said to offer a smooth finish and very distinctive flavour to the final brew.\n\nNot only is this one of the most bizarre methods of making coffee, but for up to over £400 a kilogram, Kopi Luwak is also one of the most expensive coffees available in the world today.
+5	The Etymology Of The Word "Coffee"	The earliest term for the drink of coffee was the Arabic word “qahwah”, which actually referred to a type of wine.\n\nThe Ottoman Turks then used the term “kahve”, which was followed by the Dutch word “koffie”, from which the English name was derived in 1582.
+6	Why People Confuse Espresso And Expresso	The correct pronunciation of “espresso” is an age-old argument that coffee enthusiasts have been having for years! But as it turns out, those who call it an “expresso” aren’t entirely in the wrong.\n\nThe Italian term espresso means “expressed” or “pressed out”. This is because espressos are made by forcing very hot water under high pressure through finely-ground coffee beans. So, while the correct pronunciation is ES-presso, you can see where people are coming from.
+7	The World's Largest Cup Pf Coffee Was Over 20,000 Liters	As of 15th June 2019, the largest cup of coffee ever made contained a whopping 22,739.14 litres and was recorded in the Guinness Book of World Records.\n\nThe cup was created by Alcaldía Municipal de Chinchiná (Colombia) at Parque de Bolívar, Chinchiná, Caldas, Colombia and took over a month with fifty people working on the project.\n\n
+8	People Have Tried To Ban Coffee	In its early years, there were plenty of different groups across the world that tried to ban our favourite beverage.\n\nTypically, it was because of coffee’s stimulating effect or the particular crowd it attracted. Coffee Houses fast became a spot for free thinkers to discuss their ideas. One particular instance was in Mecca all the way back in 1511 where the governor feared coffee might unite his opposition.
+9	Coffee Is One Of The Most Consumed Drinks In The World	This isn’t all that surprising, is it?\n\nAlongside water and tea, coffee is one of the most popular drinks worldwide with over 400 billion cups of it being consumed each year.\n\nBritain alone consumes approximately 2.8 kilos of coffee per person, per year and over £1 billion was spent on coffee last year.
+10	Coffee Was Discovered By A Goat Herder	All the way back in the 1500s, it was said that a goat herder in Ethiopia discovered coffee after observing strange behaviour in his goats.\n\nHe noticed that after they ate coffee cherries, they suddenly had a lot of energy and were unable to sleep at night. He shared his findings with local monks who made their own drinks from the coffee beans and the rest, as they say, is history.
+11	Coffee Helps You Live Longer	This may be our favourite one yet.\n\nThanks to it being jam-packed with antioxidants, coffee remains one of the healthiest beverages in the world.\n\nOf course, if you choose to add cream, sugar or syrup then this health factor may be impacted, but otherwise, when consumed as part of a healthy balanced diet and lifestyle, coffee can help people to live longer, happier lives.\n\n
+\.
 
 
 --
 -- Data for Name: new_drinks; Type: TABLE DATA; Schema: public; Owner: yolismazacarias
 --
 
-INSERT INTO public.new_drinks (id, title, description, ingredients, image) OVERRIDING SYSTEM VALUE VALUES (1, 'Matcha Espresso Fusion', 'green tea and expresso with milk', 'matcha, room temperature water, cold milk, hot espresso coffee, granulated sugar, crushed ice', NULL);
-INSERT INTO public.new_drinks (id, title, description, ingredients, image) OVERRIDING SYSTEM VALUE VALUES (2, 'Layered Strawberry Matcha Latte ', 'refreshing drink blended with fresh strawberries, milk, and matcha green tea ', 'strawberry sauce, ice, milk, matcha, hot water', NULL);
-INSERT INTO public.new_drinks (id, title, description, ingredients, image) OVERRIDING SYSTEM VALUE VALUES (3, 'Matcha Chai Latte', 'warm spices infused in the black tea, with sugar and milk', 'black tea, chai spices: green cardamom, black, cardamom, cloves, cinnamon stick, black peppercorn, fennel, star anise, fresh ginger, granulated sugar, water, whole milk and ice', NULL);
+COPY public.new_drinks (id, title, description, ingredients, image) FROM stdin;
+21	Iced Matcha Green Tea Latte	Light, creamy, and refreshing iced matcha latte made at home!	12oz Milk of Choice, 2 tsp matcha poweder, 2 tsp Vanilla Syrup or honey, or sugar, 1 cup ice	https://gimmedelicious.com/wp-content/uploads/2018/03/Iced-Matcha-Latte2.jpg
+\.
 
 
 --
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: yolismazacarias
 --
 
-INSERT INTO public.users (id, name, email, sub, picture) OVERRIDING SYSTEM VALUE VALUES (1, 'Yolisma', 'yolisisabel28@gmail.com', 'google-oauth2|112601203965052783704', 'https://lh3.googleusercontent.com/a/ALm5wu1k3wBHV_MM9Oq_2bYprODU_VIw-DIQMinmknTBoA=s96-c');
-INSERT INTO public.users (id, name, email, sub, picture) OVERRIDING SYSTEM VALUE VALUES (13, 'zacarias.yolisma@yahoo.com', 'zacarias.yolisma@yahoo.com', 'auth0|636abe2f00f9138b729bda75', 'https://s.gravatar.com/avatar/03d6237924a5972ed09f81091517787c?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fza.png');
+COPY public.users (id, name, email, sub, picture) FROM stdin;
+1	Yolisma	yolisisabel28@gmail.com	google-oauth2|112601203965052783704	https://lh3.googleusercontent.com/a/ALm5wu1k3wBHV_MM9Oq_2bYprODU_VIw-DIQMinmknTBoA=s96-c
+13	zacarias.yolisma@yahoo.com	zacarias.yolisma@yahoo.com	auth0|636abe2f00f9138b729bda75	https://s.gravatar.com/avatar/03d6237924a5972ed09f81091517787c?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fza.png
+\.
 
 
 --
 -- Name: coffee_facts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yolismazacarias
 --
 
-SELECT pg_catalog.setval('public.coffee_facts_id_seq', 1, false);
+SELECT pg_catalog.setval('public.coffee_facts_id_seq', 11, true);
 
 
 --
 -- Name: new_drinks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: yolismazacarias
 --
 
-SELECT pg_catalog.setval('public.new_drinks_id_seq', 7, true);
+SELECT pg_catalog.setval('public.new_drinks_id_seq', 21, true);
 
 
 --

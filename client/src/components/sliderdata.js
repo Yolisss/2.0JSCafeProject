@@ -1,19 +1,19 @@
 export const Sliderdata = [
   {
     image:
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    image:
       "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwZHJpbmtzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1604423043122-00244f00e116?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlJTIwZHJpbmtzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM3fHxtYXRjaGElMjBjb2ZmZWV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1549814343-56bebd9e31fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlJTIwZHJpbmtzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1549814343-56bebd9e31fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlJTIwZHJpbmtzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://media.istockphoto.com/id/502605381/photo/irish-cofee.jpg?s=612x612&w=0&k=20&c=TQN-p_75Huz69a4mHLnNgmXC2LBjJYoFlShhWns4c5k=",
   },
   {
     image:

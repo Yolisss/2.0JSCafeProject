@@ -28,10 +28,16 @@ export default function Home({ navChoice, user }) {
           </div>
         </div>
       ) : (
-        <div>
-          <span>
+        <div margin-top="100px">
+          <p>
             Hello <Link to="api/me">{user.name}</Link>
-          </span>
+          </p>
+          <div className="text-intro">
+            JavaSweet Cafe exists to inspire others by providing a space where
+            we share our secret of making our flavorful drinks right at the
+            comfort of your home. We also create a space where you can upload
+            and save your drinks that you've created.
+          </div>
           <div>
             <Imageslider slides={Sliderdata} />
           </div>
@@ -40,22 +46,3 @@ export default function Home({ navChoice, user }) {
     </div>
   );
 }
-
-/* <div class="carousel">
-  <div class="carousel__item">Content #1</div>
-  <div class="carousel__item carousel__item--selected">Content #2</div>
-  <div class="carousel__item">Content #3</div>
-  <div class="carousel__nav">
-    <span class="carousel__button"></span>
-    <span class="carousel__button carousel__button--selected"></span>
-    <span class="carousel__button"></span>
-  </div>
-</div>; */
-
-//  <div className="greetingsimage">
-//    <img
-//      src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg"
-//      alt="Logo"
-//      style={{ height: "443px" }}
-//    />
-//  </div>;

@@ -2,6 +2,7 @@ import React from "react";
 import SiteHeader from "../components/nav-bar";
 import AuthenticationButton from "./authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
+import Logo from "../images/logo.png";
 
 export default function Navbarlist() {
   const { user } = useAuth0();
@@ -14,30 +15,31 @@ export default function Navbarlist() {
         <ul className="navflex">
           {user && (
             <>
-              <li>
+              <img className="js-logo" src={Logo} alt="javasweet-logo" />
+              <li className="navlist1">
                 <a href="/" className="logo-name">
                   Home
                 </a>
               </li>
-              <li>
+              <li className="navlist1">
                 <a href="/hotcoffee">Hot Coffee</a>
               </li>
-              <li>
+              <li className="navlist1">
                 <a href="/icecoffee">Ice Coffee</a>
               </li>
-              <li>
+              <li className="navlist1">
                 <a href="/coffeefacts">Coffee Facts</a>
               </li>
-              <li>
+              <li className="navlist1">
                 <a href="/gallery">Gallery</a>
               </li>
-              <li>
+              <li className="navlist1">
                 <a href="/mydrinks">My Drinks</a>
               </li>
             </>
           )}
 
-          <li>
+          <li className="navlist1">
             <AuthenticationButton />
           </li>
         </ul>

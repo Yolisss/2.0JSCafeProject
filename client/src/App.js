@@ -11,6 +11,7 @@ import IceCoffeeData from "./components/icecoffee";
 import Navbarlist from "./components/navbarlist";
 import Coffeefacts from "./components/coffeefacts";
 import { Sliderdata } from "./components/sliderdata";
+import Gallery from "./components/gallery";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -36,6 +37,7 @@ function App() {
               <Route path="/hotcoffee" element={<HotCoffeeData />} />
               <Route path="/icecoffee" element={<IceCoffeeData />} />
               <Route path="/coffeefacts" element={<Coffeefacts />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/mydrinks" element={<Favdrinksform />} />
             </>
           )}
