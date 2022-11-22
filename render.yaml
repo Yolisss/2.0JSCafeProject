@@ -1,4 +1,4 @@
-                                                                                                           services:
+services:
   - name: server
     plan: free
     type: web
@@ -7,7 +7,7 @@
     buildCommand: cd client && npm install && npm run build && cd ../server && npm install
     startCommand: cd server && node ./node_modules/db-migrate/bin/db-migrate up && node server.js
     envVars:
-      - key: DATABASE_URL
+      - key: DB_URL
         fromDatabase:
           name: db
           property: connectionString
