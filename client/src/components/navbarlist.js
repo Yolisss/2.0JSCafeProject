@@ -3,6 +3,7 @@ import SiteHeader from "../components/nav-bar";
 import AuthenticationButton from "./authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
 import Logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Navbarlist() {
   const { user } = useAuth0();
@@ -17,24 +18,24 @@ export default function Navbarlist() {
             <>
               <img className="js-logo" src={Logo} alt="javasweet-logo" />
               <li className="navlist1">
-                <a href="/" className="logo-name">
+                <Link to="/" className="logo-name">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="navlist1">
-                <a href="/hotcoffee">Hot Coffee</a>
+                <Link to="/hotcoffee">Hot Coffee</Link>
               </li>
               <li className="navlist1">
-                <a href="/icecoffee">Ice Coffee</a>
+                <Link to="/icecoffee">Ice Coffee</Link>
               </li>
               <li className="navlist1">
-                <a href="/coffeefacts">Coffee Facts</a>
+                <Link to="/coffeefacts">Coffee Facts</a>
               </li>
               <li className="navlist1">
-                <a href="/gallery">Gallery</a>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li className="navlist1">
-                <a href="/mydrinks">My Drinks</a>
+                <Link to="/mydrinks">My Drinks</Link>
               </li>
             </>
           )}
