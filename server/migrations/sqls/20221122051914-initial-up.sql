@@ -20,7 +20,7 @@ CREATE TABLE users (
     picture character varying
 );
 
-SELECT pg_catalog.setval('coffee_facts_id_seq', 11, true);
+
 
 SELECT pg_catalog.setval('new_drinks_id_seq', 21, true);
 
