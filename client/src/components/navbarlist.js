@@ -29,7 +29,7 @@ export default function Navbarlist() {
                 <Link to="/icecoffee">Ice Coffee</Link>
               </li>
               <li className="navlist1">
-                <Link to="/coffeefacts">Coffee Facts</a>
+                <Link to="/coffeefacts">Coffee Facts</Link>
               </li>
               <li className="navlist1">
                 <Link to="/gallery">Gallery</Link>
