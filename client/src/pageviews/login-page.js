@@ -41,6 +41,7 @@ export default function Home({ navChoice, user }) {
           <div>
             <Imageslider slides={Sliderdata} />
           </div>
+          <footer></footer>
         </div>
       )}
     </div>
