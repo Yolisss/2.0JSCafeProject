@@ -193,9 +193,20 @@ a:hover {
   font-style: italic;
 }
 
-.adddrink {
+.addeddrink {
+  text-align: center;
   display: center;
-  margin-left: 220px;
+  margin: 20px;
+  padding: 50px;
+}
+
+.drinkdescription {
+  padding: 20px;
+}
+
+.deletedrinkbutton {
+  margin: 20px;
+  padding: 5px;
 }
 
 .hotcoffeecard {
@@ -227,7 +238,7 @@ a:hover {
   margin-right: auto;
   height: auto;
   width: auto;
-  padding: 200px;
+  padding: 60px;
 }
 
 .greetings {
@@ -310,6 +321,7 @@ a:hover {
 }
 
 .coffeefactcontainer {
+  position: absolute;
   padding: 100px;
   background-color: #c4beaf;
   color: black;
@@ -329,8 +341,8 @@ a:hover {
   position: relative;
   text-align: center;
   margin-top: 100px;
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
   border-style: solid;
   border-spacing: 1px 1rem;
   border-radius: 4%;
@@ -359,9 +371,9 @@ a:hover {
 }
 
 .factphotos {
-  max-width: 50%;
+  max-width: 40%;
   height: 50%;
-  padding-left: 250px;
+  padding-left: 330px;
   border: 30px;
 }
 

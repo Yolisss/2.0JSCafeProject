@@ -118,33 +118,24 @@ export default function Favdrinksform() {
       <div className="drinkform">
         {newDrink.map((newDrink, index) => {
           return (
-            <div className="addeddrink">
-              <tr key={index}>
-                <div>
-                  <td>{newDrink.title}</td>
-                </div>
-                <div>
-                  <td>{newDrink.description}</td>
-                </div>
-                <div>
-                  <td>{newDrink.ingredients}</td>
-                </div>
-                <div>
-                  <td>{newDrink.id}</td>
-                </div>
-                <div className="icecoffee-pictures">
-                  {" "}
-                  <td>
-                    {/* inline style */}
-                    <img src={newDrink.image} style={{ height: "443px" }}></img>
-                  </td>
-                  {/* <td>{cold.id}</td> */}
-                </div>
-                {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
-                {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
-              </tr>
+            <div className="icecoffee-pictures">
+              <div className="drinkdescription">
+                {newDrink.title}
+                <br></br>
+                {newDrink.description}
+                <br></br>
+                {newDrink.ingredients}
+                <br></br>
+                {newDrink.id}
+              </div>
+              <br></br> {/* inline style */}
+              <img src={newDrink.image} style={{ height: "443px" }}></img>
+              {/* <td>{cold.id}</td> */}
+              {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
+              {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
+              <br></br>
               <button // src={deleteIcon}
-                className="trash"
+                className="deletedrinkbutton"
                 alt="trash"
                 onClick={() => handleDeleteDrink(newDrink.id)}
               >
