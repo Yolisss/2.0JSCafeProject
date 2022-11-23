@@ -32,8 +32,8 @@ export default function Coffeefacts() {
       <div className="coffeefactcontainer">
         <div className="coffeefacttitle">Did you know?</div>
         <img className="factphotos" src={CoffeeFifthPhoto} />
-        <div className="coffeefact">
-          <div className="factholder">{coffeeFact.fact}</div>
+        <div className="coffeefactborder">
+          <div className="actualfacttitle">{coffeeFact.fact}</div>
           <br></br>
           <div className="factdescriptionholder">{coffeeFact.description}</div>
           <br></br>

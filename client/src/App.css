@@ -288,8 +288,9 @@ body {
 }
 
 .coffeefactcontainer {
-  padding: 50px;
+  padding: 100px;
   background-color: #c4beaf;
+  color: black;
 }
 
 .coffeefacttitle {
@@ -299,8 +300,10 @@ body {
   padding: 100px;
   font-size: xx-large;
   font-style: italic;
+  color: black;
 }
-.coffeefact {
+.coffeefactborder {
+  background-color: #827e79;
   position: relative;
   text-align: center;
   margin-top: 100px;
@@ -311,7 +314,7 @@ body {
   border-radius: 4%;
 }
 
-.factholder {
+.actualfacttitle {
   padding-top: 40px;
 }
 
@@ -323,6 +326,7 @@ body {
   position: center;
   text-align: center;
   padding: 80px;
+  color: purple;
 }
 
 .video5 {
@@ -336,7 +340,7 @@ body {
 .factphotos {
   max-width: 50%;
   height: 50%;
-  padding-left: 270px;
+  padding-left: 250px;
   border: 30px;
 }
 
