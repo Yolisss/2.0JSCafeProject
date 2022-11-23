@@ -38,7 +38,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #c4beaf;
 }
 /* #cfbc9f */
 
@@ -287,18 +287,61 @@ body {
   justify-content: space-evenly; */
 }
 
-.coffeefacttitle {
-  margin-top: 100px;
-  text-align: center;
+.coffeefactcontainer {
+  padding: 100px;
+  background-color: #c4beaf;
+  color: black;
 }
-.coffeefact {
+
+.coffeefacttitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 100px;
+  font-size: xx-large;
+  font-style: italic;
+  color: black;
+}
+.coffeefactborder {
+  background-color: #827e79;
   position: relative;
   text-align: center;
   margin-top: 100px;
   margin-left: 250px;
   margin-right: 250px;
   border-style: solid;
-  border-spacing: 5px 1rem;
+  border-spacing: 1px 1rem;
+  border-radius: 4%;
+}
+
+.actualfacttitle {
+  padding-top: 40px;
+}
+
+.factdescriptionholder {
+  padding: 30px;
+}
+
+.factbutton {
+  position: center;
+  text-align: center;
+  padding: 80px;
+  color: purple;
+}
+
+.video5 {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  position: center;
+  padding-left: 270px;
+}
+
+.factphotos {
+  max-width: 50%;
+  height: 50%;
+  padding-left: 250px;
+  border: 30px;
 }
 
 /* .hotcoffees {

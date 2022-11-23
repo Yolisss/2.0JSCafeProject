@@ -1,5 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+// import CoffeePic from "../assets2/coffee2.jpeg";
+import CoffeeFirstPhoto from "../assets2/coffeephoto11.jpg";
+import CoffeeSecondPhoto from "../assets2/coffeephoto12.jpg";
+import CoffeeThirdPhoto from "../assets2/coffeefacts1.jpg";
+import CoffeeFourthPhoto from "../assets2/coffeephoto13.jpg";
+import CoffeeFifthPhoto from "../assets2/coffeephoto15.jpg";
 
 export default function Coffeefacts() {
   const [coffeeFact, setCoffeeFact] = useState([]);
@@ -23,12 +29,32 @@ export default function Coffeefacts() {
 
   return (
     <>
-      <div className="coffeefacttitle">Did you know?</div>
-      <div className="coffeefact">
-        <p>{coffeeFact.fact}</p>
-        <p>{coffeeFact.description}</p>
-        <br></br>
-        <button onClick={getFact}>Get Coffee Fact</button>
+      <div className="coffeefactcontainer">
+        <div className="coffeefacttitle">Did you know?</div>
+        <img className="factphotos" src={CoffeeFifthPhoto} />
+        <div className="coffeefactborder">
+          <div className="actualfacttitle">{coffeeFact.fact}</div>
+          <br></br>
+          <div className="factdescriptionholder">{coffeeFact.description}</div>
+          <br></br>
+          {/* <button onClick={getFact}>Get Coffee Fact</button> */}
+        </div>
+        <div className="factbutton">
+          <button onClick={getFact}>Get Coffee Fact</button>
+        </div>
+        <div>
+          <img className="factphotos" src={CoffeeThirdPhoto} />
+        </div>
+        <div>
+          <img className="factphotos" src={CoffeeFirstPhoto} />
+        </div>
+        <div>
+          <img className="factphotos" src={CoffeeSecondPhoto} />
+        </div>
+        <div>
+          <img className="factphotos" src={CoffeeFourthPhoto} />
+        </div>
+        {/* <img src={CoffeePic} /> */}
       </div>
     </>
   );
