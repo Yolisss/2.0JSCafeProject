@@ -97,4 +97,44 @@ Auth0
   </tr>
 </table>
 </table>
+
+<h5 align="center">Original Schema</h5>
+<h2align="center">Wireframe</h2>
+<img height="500px" width="100%" src="WireFrame10_28.png">
+<h2 >Installation</h2>
+<h3>Node</h3>
+I strongly recommend using a Node version manager like <a href="https://www.w3schools.com](https://github.com/nvm-sh/nvm"></a> 
+To install Node.js and npm 
+<h3>Install</h3>
+*Disclaimer: The app uses Auth0 and requires an Auth0 domain + ClientId to use. As wellas email JS, which requires an emailJS account: service id, domain id and template id*<br>
+Clone the repo:<br>
+<br><code>https://github.com/Yolisss/2.0JSCafeProject</code>
+<br>To clean your folder from the owner git, run the command:
+<br><code>rm -rf .git</code>
+<br>Run the command to start your directory:
+<br><code>git init</code>
+<br>Go to the server folder in the project:
+<br><code>cd server</code>
+<br>Install all NPM packages using this in the root directory:
+<br><code>npm install</code>
+<br>Inside your server folder, create an .env file with:
+<br><code>touch .env</code>
+<br>Inside your .env add:
+<br><code>postgres://localhost:5432/AnimeTracker</code>
+<br>BACK TO THE TERMINAL:<br>
+<br>To restore the DB dump file that the project already contain, just run the command:
+<br><code>psql -U postgres -f db.sql</code>
+<br>If you had configured your postgres without password just run the command:
+<br><code>psql -f db.sql</code>
+<br><code>npm start</code>
+<br>Go to client folder:
+<br><code>cd ..</code>
+<br><code>cd client</code>
+<br><code> npm install</code>
+<br>Both server and Client can run with:
+<br><code>npm start</code>
+  <h2>Testing</h2>
+  <h3>Jest Testing</h3>
+  To run tests on the terminal, go to the Clien side and run the following command:
+  <code>npm test</code>
                                                                                                                                
