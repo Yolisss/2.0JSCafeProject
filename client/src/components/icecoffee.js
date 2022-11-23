@@ -22,10 +22,8 @@ const IceCoffeeData = () => {
     getIceCoffee();
   }, []);
   return (
-    <div>
-      <div className="icemaintitle">
-        <h2> List of Ice Coffees</h2>
-      </div>
+    <div className="icecoffeescss">
+      <h2> List of Ice Coffees</h2>
       {/* <div>
         <div className="icetitlenames">
           <div className="titlename">Title</div>
@@ -34,21 +32,21 @@ const IceCoffeeData = () => {
           <div>Images</div>
         </div>
       </div> */}
-      {individualIceCoffee.map((cold, index) => {
-        return (
-          <div className="icecoffees" key={index}>
-            <div>{cold.title}</div>
-            <br></br>
-            <div>{cold.description}</div>
-            <br></br>
-            <div>{cold.ingredients}</div>
-            <img src={cold.image} style={{ height: "443px" }}></img>
-            {/* <td>{cold.id}</td> */}
-            {/* <td><img src={trashicon} alt="Trash Can" onClick={() => handleDeleteAnimal(animal.id)}/></td> */}
-            {/* <td><button onClick={() => handleDeleteAnimal(animal.id)}>DELETE</button></td> */}
-          </div>
-        );
-      })}
+      <div className="icecard_grid">
+        {individualIceCoffee.map((cold, index) => {
+          return (
+            <div className="icecoffee_card">
+              <div class="icecontainer">{cold.title}</div>
+              <div className="icecard_image_container">
+                {/* <img src={cold.image} style={{ height: "443px" }}></img> */}
+                <img src={cold.image} className="actualimg"></img>
+              </div>
+              <p>{cold.description}</p>
+              <p>{cold.ingredients}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
