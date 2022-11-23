@@ -96,10 +96,5 @@ Auth0
     <td>Text</td>
   </tr>
 </table>
-  <tr>
-    <td>Integer (Primary Key)</td>
-    <td>Integer (Foreign Key: user.id)</td>
-    <td>Boolean</td>
-  </tr>
 </table>
                                                                                                                                
