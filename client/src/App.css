@@ -60,6 +60,8 @@ a {
 
 a:hover {
   color: #74ab76;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .hotcoffees {
