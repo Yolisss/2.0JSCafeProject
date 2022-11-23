@@ -38,8 +38,9 @@
 }
 
 body {
-  background-color: #cfbc9f;
+  background-color: white;
 }
+/* #cfbc9f */
 
 /* .card {
   display: grid;
@@ -64,13 +65,24 @@ body {
 }
 
 .coffee_card {
-  background-color: antiquewhite;
+  background-color: #c4beaf;
   padding: 10px;
-  border: 1px solid #9c7f51;
+  border: 1px solid #c4beaf;
   text-align: center;
+  border-radius: 20px;
+  height: 450px;
+  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
   /* height: 200px;
   width: 200px; */
 }
+
+.coffee_card:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
 .card_image {
   /* max-height: 120px; */
   /*object-fit: fill;
@@ -88,6 +100,32 @@ body {
   width: 250px;
 }
 
+.primaryhottitle {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hottitlecontainer {
+  padding: 10px;
+  text-align: center;
+}
+
+.primaryicetitle {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hotparagraph1 {
+  padding-top: 30px;
+}
+
+.icecontainer {
+  padding: 10px;
+  text-align: center;
+}
+
 .icecoffeecss {
   padding: 25px;
 }
@@ -100,13 +138,24 @@ body {
 }
 
 .icecoffee_card {
-  background-color: antiquewhite;
+  background-color: #c4beaf;
   padding: 10px;
-  border: 1px solid #9c7f51;
+  border: 1px solid #c4beaf;
   text-align: center;
+  border-radius: 20px;
+  height: 450px;
+  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
   /* height: 200px;
   width: 200px; */
 }
+
+.icecoffee_card:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
 .icecard_image {
   max-height: 120px;
   /*object-fit: fill;

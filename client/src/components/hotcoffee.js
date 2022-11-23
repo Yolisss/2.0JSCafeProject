@@ -23,7 +23,7 @@ const HotCoffeeData = () => {
   }, []);
   return (
     <div className="hotcoffees">
-      <h2> List of Hot Coffees</h2>
+      <h2 className="primaryhottitle"> List of Hot Coffees</h2>
       {/* <table>
         <thead>
           <tr>
@@ -40,11 +40,15 @@ const HotCoffeeData = () => {
           return (
             <div>
               <div className="coffee_card">
-                <div class="container">{cold.title}</div>
+                <div class="hottitlecontainer">
+                  <b>{cold.title}</b>
+                </div>
                 <div className="card_image_container">
                   <img src={cold.image} className="card_image"></img>
                 </div>
-                <p>{cold.description}</p>
+                <br></br>
+                <p className="hotparagph1">{cold.description}</p>
+                <br></br>
                 <p>{cold.ingredients}</p>
 
                 {/* inline style */}

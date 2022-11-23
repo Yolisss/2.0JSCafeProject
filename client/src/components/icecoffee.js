@@ -23,7 +23,7 @@ const IceCoffeeData = () => {
   }, []);
   return (
     <div className="icecoffeescss">
-      <h2> List of Ice Coffees</h2>
+      <h2 className="primaryicetitle"> List of Ice Coffees</h2>
       {/* <div>
         <div className="icetitlenames">
           <div className="titlename">Title</div>
@@ -36,7 +36,9 @@ const IceCoffeeData = () => {
         {individualIceCoffee.map((cold, index) => {
           return (
             <div className="icecoffee_card">
-              <div class="icecontainer">{cold.title}</div>
+              <div class="icecontainer">
+                <b>{cold.title}</b>
+              </div>
               <div className="icecard_image_container">
                 {/* <img src={cold.image} style={{ height: "443px" }}></img> */}
                 <img src={cold.image} className="actualimg"></img>
