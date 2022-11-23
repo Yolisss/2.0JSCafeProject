@@ -235,6 +235,17 @@ body {
   margin-left: 80px;
 }
 
+.greetinguser {
+  padding: 70px;
+  font-size: 25px;
+}
+.text-intro {
+  text-align: center;
+  padding: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
 .authButton {
   margin-top: 50px;
   margin-bottom: 100px;
@@ -261,7 +272,7 @@ body {
   padding-top: 60px;
   padding-bottom: 30px;
   border-style: solid;
-  color: #9c7f51;
+  color: #827e79;
 }
 
 .icemaintitle {
@@ -326,7 +337,6 @@ body {
   position: center;
   text-align: center;
   padding: 80px;
-  color: purple;
 }
 
 .video5 {
@@ -397,15 +407,16 @@ video {
 
 .slider {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .image {
-  width: 1000px;
-  height: 600px;
+  width: 900px;
+  height: 500px;
   border-radius: 10px;
 }
 
