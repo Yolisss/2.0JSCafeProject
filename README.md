@@ -56,4 +56,51 @@ Auth0
 <image src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg" height="50px">
   </image>
   CoffeeAPI
+  
+  <h1>Minimum Viable Product</h1>
+  <h2>Tier 1</h1>
+  <li>User Registration</li>
+  <li>Provide list of hot and cold coffees from API</li>
+  <br></br>
+  <h2>Tier 2</h2>
+  <li>Set up drink form</li>
+  <li>Allow users to add drink of their own</li>
+  <li>Delete functionality button</li>
+  <br></br>
+  <h2>TIer 3</h2>
+  <li>Get "facts" card functionality working</li>
+  <li>Allow users to recieve new facts each time they pressed "get coffee facts" button</li>
+  
+  <h2 align="center">Drawing Board/Planning Phase</h2>
+<h3 align="center"> Official Database Schema </h3>
+<h4 align="center">User</h4>
+<table align="center">
+  </tr>
+  <tr>
+    <th>User_id</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+</table>
+<h4 align="center">Drink</h4>
+<table align="center">
+  <tr>
+    <th>post_id</th>
+    <th>User_Id</th>
+    <th>Beverage Name</th>
+    <th>Ingredients</th>
+  </tr>
+  <tr>
+    <td>Integer (Primary Key)</td>
+    <td>Text</td>
+    <td>Text</td>
+  </tr>
+</table>
+<
+  <tr>
+    <td>Integer (Primary Key)</td>
+    <td>Integer (Foreign Key: user.id)</td>
+    <td>Boolean</td>
+  </tr>
+</table>
                                                                                                                                
