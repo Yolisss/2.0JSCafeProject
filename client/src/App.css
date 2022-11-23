@@ -362,7 +362,7 @@ a:hover {
 
 .coffeefactcontainer {
   position: absolute;
-  padding: 100px;
+  padding: 50px;
   background-color: #c4beaf;
   color: black;
 }
@@ -429,13 +429,21 @@ a:hover {
   display: flex;
   justify-content: space-evenly; */
 
-.logoutbutton,
+.logoutbutton {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+}
 .loginbutton {
   appearance: none;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   text-decoration: underline;
+  padding-top: -70px;
+  padding-bottom: 40px;
 }
 
 * {
