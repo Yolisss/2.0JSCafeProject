@@ -48,3 +48,12 @@ src="https://user-images.githubusercontent.com/76704309/202370441-e6500520-443f-
 src="https://user-images.githubusercontent.com/76704309/202350485-fbca3896-cdf0-42b6-bace-5ff4130d0745.png" height="50px">
 </image>
 
+<h1>APIs</h1>
+<image src="https://user-images.githubusercontent.com/76704309/202351473-c2b9308b-9fd1-4dd6-980e-108bb1eb8731.png" height="50px"> 
+Auth0
+<br></br>
+</image>
+<image src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg" height="50px">
+  </image>
+  CoffeeAPI
+                                                                                                                               
