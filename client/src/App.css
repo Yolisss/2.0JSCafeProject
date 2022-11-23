@@ -37,9 +37,49 @@
   }
 }
 
+.adddrinkform {
+  margin: 60px;
+  border-radius: 20px;
+}
+
 body {
   background-color: #c4beaf;
 }
+
+.footer {
+  text-align: center;
+  background-color: #827e79;
+  color: black;
+  height: 120px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+.media-icons {
+  display: flex;
+  flex-direction: row;
+  float: none;
+  padding: 6px;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.twitter-icons {
+  padding: 20px;
+}
+
+.tiktok-icons {
+  padding: 20px;
+}
+
+.ig-icons {
+  padding: 20px;
+}
+
 /* #cfbc9f */
 
 /* .card {

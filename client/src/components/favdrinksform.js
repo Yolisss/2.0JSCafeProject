@@ -147,7 +147,7 @@ export default function Favdrinksform() {
         <div className="addDrink">
           <header className="add-drink-header">Add a new Drink</header>
           <form id="add-drink" action="#" onSubmit={handleAddDrink}>
-            <fieldset>
+            <fieldset className="adddrinkform">
               <label>Title: </label>
               <br></br>
               <input
@@ -211,6 +211,7 @@ export default function Favdrinksform() {
             {/* Add more form fields here */}
             <input type="submit" />
           </form>
+          <br></br>
         </div>
       </div>
     </>

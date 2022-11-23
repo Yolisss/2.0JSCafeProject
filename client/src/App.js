@@ -12,6 +12,7 @@ import Navbarlist from "./components/navbarlist";
 import Coffeefacts from "./components/coffeefacts";
 import { Sliderdata } from "./components/sliderdata";
 import Gallery from "./components/gallery";
+import Footer from "./components/footer";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -46,6 +47,9 @@ function App() {
 
           <Route path="api/me" element={<Profile user={user} />} />
         </Routes>
+      </div>
+      <div className="footercontainer">
+        <Footer />
       </div>
     </div>
   );
