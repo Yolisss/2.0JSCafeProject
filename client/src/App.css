@@ -53,6 +53,15 @@ body {
   background: rgb(124, 149, 120);
   text-align: center;
 } */
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #74ab76;
+}
+
 .hotcoffees {
   padding: 25px;
 }
@@ -269,8 +278,8 @@ body {
   justify-content: space-evenly;
   margin-left: 50px;
   margin-right: 50px;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   border-style: solid;
   color: #827e79;
 }
