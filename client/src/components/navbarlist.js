@@ -31,9 +31,9 @@ export default function Navbarlist() {
               <li className="navlist1">
                 <Link to="/coffeefacts">Coffee Facts</Link>
               </li>
-              <li className="navlist1">
+              {/* <li className="navlist1">
                 <Link to="/gallery">Gallery</Link>
-              </li>
+              </li> */}
               <li className="navlist1">
                 <Link to="/mydrinks">My Drinks</Link>
               </li>

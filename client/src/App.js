@@ -37,7 +37,7 @@ function App() {
               <Route path="/hotcoffee" element={<HotCoffeeData />} />
               <Route path="/icecoffee" element={<IceCoffeeData />} />
               <Route path="/coffeefacts" element={<Coffeefacts />} />
-              <Route path="/gallery" element={<Gallery />} />
+              {/* <Route path="/gallery" element={<Gallery />} /> */}
               <Route path="/mydrinks" element={<Favdrinksform />} />
             </>
           )}
