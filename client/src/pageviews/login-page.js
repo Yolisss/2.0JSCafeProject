@@ -29,9 +29,9 @@ export default function Home({ navChoice, user }) {
         </div>
       ) : (
         <div margin-top="100px">
-          <p>
+          <div className="greetinguser">
             Hello <Link to="api/me">{user.name}</Link>
-          </p>
+          </div>
           <div className="text-intro">
             JavaSweet Cafe exists to inspire others by providing a space where
             we share our secret of making our flavorful drinks right at the
