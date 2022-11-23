@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 // import CoffeePic from "../assets2/coffee2.jpeg";
-import CoffeeBeans from "../assets/coffeevideo5.mp4";
 import CoffeeFirstPhoto from "../assets2/coffeephoto11.jpg";
 import CoffeeSecondPhoto from "../assets2/coffeephoto12.jpg";
 import CoffeeThirdPhoto from "../assets2/coffeefacts1.jpg";
 import CoffeeFourthPhoto from "../assets2/coffeephoto13.jpg";
+import CoffeeFifthPhoto from "../assets2/coffeephoto15.jpg";
 
 export default function Coffeefacts() {
   const [coffeeFact, setCoffeeFact] = useState([]);
@@ -31,7 +31,7 @@ export default function Coffeefacts() {
     <>
       <div className="coffeefactcontainer">
         <div className="coffeefacttitle">Did you know?</div>
-        <video className="video5" src={CoffeeBeans} autoPlay loop muted />
+        <img className="factphotos" src={CoffeeFifthPhoto} />
         <div className="coffeefact">
           <div className="factholder">{coffeeFact.fact}</div>
           <br></br>
