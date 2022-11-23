@@ -88,7 +88,8 @@ export default function Favdrinksform() {
       body: JSON.stringify(newDrink),
     });
     const content = await response.json();
-    setNewDrink([newDrink, content]);
+
+    getDrink();
     //calling a specific part of your reducer type
     //whenever we press submit, all the values in the boxes will be cleared
     dispatch({ type: "clearForm" });
@@ -104,7 +105,7 @@ export default function Favdrinksform() {
     const deleteDrinkFunction = newDrink.filter(
       (drink) => newDrink.id !== deleteId
     );
-    setNewDrink(deleteDrinkFunction);
+    getDrink();
   };
   const [searchTerm, setSearchTerm] = useState("");
 
