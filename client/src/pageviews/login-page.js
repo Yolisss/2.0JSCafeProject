@@ -38,10 +38,10 @@ export default function Home({ navChoice, user }) {
             comfort of your home. We also create a space where you can upload
             and save your drinks that you've created.
           </div>
-          <div>
+          <div style={{ padding: "50px" }}>
             <Imageslider slides={Sliderdata} />
           </div>
-          <footer></footer>
+          {/* <footer></footer> */}
         </div>
       )}
     </div>
