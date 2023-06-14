@@ -123,7 +123,7 @@ app.post("/api/me", cors(), async (req, res) => {
   };
   console.log(newUser);
 
-  const queryEmail = "SELECT * FROM users WHERE email=$1 LIMIT 1";
+  const queryEmail = "SELECT * FROM coffee_users WHERE email=$1 LIMIT 1";
   const valuesEmail = [newUser.email];
   const resultsEmail = await db.query(queryEmail, valuesEmail);
   console.log(resultsEmail);
@@ -131,7 +131,7 @@ app.post("/api/me", cors(), async (req, res) => {
     console.log(`Thank you for comming back`);
   } else {
     const query =
-      "INSERT INTO users( name, email, sub, picture) VALUES($1, $2, $3, $4) RETURNING *";
+      "INSERT INTO coffee_users( name, email, sub, picture) VALUES($1, $2, $3, $4) RETURNING *";
     const values = [newUser.name, newUser.email, newUser.sub, newUser.picture];
     const result = await db.query(query, values);
     console.log(result);
