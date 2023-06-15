@@ -5,7 +5,7 @@
 <img src="https://user-images.githubusercontent.com/106282120/203226696-8793cafc-a7c7-43df-a5b6-d97ca687f52c.png" />
 </div>
 <section>
-<b><h3>Project Description:</h3></b>
+<b><h2>Project Description</h2></b>
 Java Sweet Cafe is a space for coffee lovers to log into their account to have accessibility to a list of either our hot or cold coffees. These unique hot and cold coffees hold special ingredients made from JS Café that allows users to be able to make these beverages right at home. The purpose of this App is allowing users to learn how to make these drinks at home and save money. On top of that, coffee lovers also have the option to document any drinks that they may have created on their own. 
 </section>
 
@@ -64,7 +64,7 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
   <li>Get "facts" card functionality working</li>
   <li>Allow users to recieve new facts each time they pressed "get coffee facts" button</li>
   
-  <h2 align="center">Drawing Board/Planning Phase</h2>
+  <h2>Drawing Board/Planning Phase</h2>
 <h3 align="center"> Official Database Schema </h3>
 <h4 align="center">User</h4>
 <table align="center">
@@ -96,7 +96,7 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
   </tr>
 </table>
 </table>
-<h2 align="center">Wireframe</h2>
+<h2>Wireframe</h2>
 <h4>Home Page and Auth0</h4>
 <img align="center" height="500px" width="800px" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/856e82e0-80ce-48f7-97f6-05d997f20f7d">
 </br>
@@ -106,40 +106,54 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
 <h4>Coffee Facts Page and Coffee Form</h3>
 <img align="center" height="500px" width="800px" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/c4483b49-688b-44d6-8a70-2e18076fee75">
 
-<h2 >Installation</h2>
-<h3>Node</h3>
-I strongly recommend using a Node version manager like <a href="https://www.w3schools.com](https://github.com/nvm-sh/nvm"></a> 
-To install Node.js and npm 
-<h3>Install</h3>
-*Disclaimer: The app uses Auth0 and requires an Auth0 domain + ClientId to use. As wellas email JS, which requires an emailJS account: service id, domain id and template id*<br>
-Clone the repo:<br>
-<br><code>https://github.com/Yolisss/2.0JSCafeProject</code>
-<br>To clean your folder from the owner git, run the command:
-<br><code>rm -rf .git</code>
-<br>Run the command to start your directory:
-<br><code>git init</code>
-<br>Go to the server folder in the project:
-<br><code>cd server</code>
-<br>Install all NPM packages using this in the root directory:
-<br><code>npm install</code>
-<br>Inside your server folder, create an .env file with:
-<br><code>touch .env</code>
-<br>Inside your .env add:
-<br><code>postgres://localhost:5432/AnimeTracker</code>
-<br>BACK TO THE TERMINAL:<br>
-<br>To restore the DB dump file that the project already contain, just run the command:
-<br><code>psql -U postgres -f db.sql</code>
-<br>If you had configured your postgres without password just run the command:
-<br><code>psql -f db.sql</code>
-<br><code>npm start</code>
-<br>Go to client folder:
-<br><code>cd ..</code>
-<br><code>cd client</code>
-<br><code> npm install</code>
-<br>Both server and Client can run with:
-<br><code>npm start</code>
+## Installation
+[Back to Contents](#contents)
+
+**This project requires Auth0! Please visit [Auth0](https://auth0.com/) to make an account and retrieve a domain and clientid. See .env.example for set up!**
+
+Step 1: Clone my project & switch into the project directory.
+
+```bash
+  git clone https://github.com/Yolisss/2.0JSCafeProject
+  cd 2.0JSCafeProject
+```
+
+Step 2: Install all packages.
+```bash
+  cd client && npm install && cd ../server && npm install
+```
+
+Step 3: Setup Environment Variables
+- Copy the instructions from both .env.example files in the client and server.
+
+Step 4: Connect the database and the data.
+```bash
+  cd server
+  psql postgres -f db.sql
+```
+
+Step 5: Start the program!
+
+Method 1: Have two servers running at the same time.
+```bash
+  cd client && npm start
+  // open a new terminal
+  cd server && npm start
+```
+
+Method 2: Have just one server running.
+```bash
+  cd client && npm run build
+  cd server && npm run start
+```
+
+**Note: 
+Client will be running on [http://localhost:3000](http://localhost:3000) and server will be running on [http://localhost:8080](http://localhost:8080).**
+
+
+
   <h2>Testing</h2>
   <h3>Jest Testing</h3>
-  To run tests on the terminal, go to the Clien side and run the following command:
+  To run tests on the terminal, go to the Client side and run the following command:
   <code>npm test</code>
                                                                                                                                
