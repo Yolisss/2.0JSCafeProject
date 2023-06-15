@@ -1,16 +1,17 @@
-<h1>JavaSweet Cafe</h1>
+<h1 align="center">JavaSweet Cafe</h1>
 <br></br>
 
-![3](https://user-images.githubusercontent.com/106282120/203226696-8793cafc-a7c7-43df-a5b6-d97ca687f52c.png)
-
+<div align="center">
+<img src="https://user-images.githubusercontent.com/106282120/203226696-8793cafc-a7c7-43df-a5b6-d97ca687f52c.png" />
+</div>
 <section>
 <b><h3>Project Description:</h3></b>
 Java Sweet Cafe is a space for coffee lovers to log into their account to have accessibility to a list of either our hot or cold coffees. These unique hot and cold coffees hold special ingredients made from JS Café that allows users to be able to make these beverages right at home. The purpose of this App is allowing users to learn how to make these drinks at home and save money. On top of that, coffee lovers also have the option to document any drinks that they may have created on their own. 
 </section>
 
-<h2>Test Site Here</h2>
-<a align="center" href="https://server-h05o.onrender.com" >JAVASWEET CAFE DEPLOMENT</a>
-<br></br>
+<h3 align="center">DISCLAIMER</h3>
+  <p align="center">Because this app is utilizing the free version of Render, timing for pages to render may delay by a few seconds</h4>
+<br>
 <h2>Mock User Accounts(can be used to test site)</h2>
 <table><p>Email</p></table>
 <li>Diana@catmama.com</li>
@@ -73,6 +74,11 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
     <th>Name</th>
     <th>Email</th>
   </tr>
+  <tr>
+    <td>Integer (Primary Key)</td>
+    <td>Text</td>
+    <td>Text</td>
+  </tr>
 </table>
 <h4 align="center">Drink</h4>
 <table align="center">
@@ -86,15 +92,19 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
     <td>Integer (Primary Key)</td>
     <td>Text</td>
     <td>Text</td>
+     <td>Text</td>
   </tr>
 </table>
 </table>
-
-<h5 align="center">Original Schema</h5>
-<h2align="center">Wireframe</h2>
-<img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/856e82e0-80ce-48f7-97f6-05d997f20f7d">
-<img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/8a9a0b37-69b5-4970-a949-7169b9a5b120">
-<img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/c4483b49-688b-44d6-8a70-2e18076fee75">
+<h2 align="center">Wireframe</h2>
+<h4>Home Page and Auth0</h4>
+<img align="center" height="500px" width="800px" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/856e82e0-80ce-48f7-97f6-05d997f20f7d">
+</br>
+<h4>Welcome Page, Hot Drinks Page and Cold Drinks Page </h4>
+<img align="center" height="500px" width="800px" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/8a9a0b37-69b5-4970-a949-7169b9a5b120">
+</br>
+<h4>Coffee Facts Page and Coffee Form</h3>
+<img align="center" height="500px" width="800px" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/c4483b49-688b-44d6-8a70-2e18076fee75">
 
 <h2 >Installation</h2>
 <h3>Node</h3>
