@@ -41,14 +41,13 @@ Java Sweet Cafe is a space for coffee lovers to log into their account to have a
          <td align="center"><img src="https://user-images.githubusercontent.com/76704309/202370441-e6500520-443f-46c0-8062-243cfdf0ee84.png" height="30px"><br>emailJS</td>
   </tr>
 </table>
-<h1>APIs</h1>
-<image src="https://user-images.githubusercontent.com/76704309/202351473-c2b9308b-9fd1-4dd6-980e-108bb1eb8731.png" height="50px"> 
-Auth0
-<br></br>
-</image>
-<image src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg" height="50px">
-  </image>
-  CoffeeAPI
+ <h2>APIs</h2>
+   <table align="center">
+     <tr>
+         <td align="center"><img src="https://user-images.githubusercontent.com/76704309/202351473-c2b9308b-9fd1-4dd6-980e-108bb1eb8731.png" height="30px"><br>Auth0</td>
+        <td align="center"><img src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg" height="40px"><br>CoffeeAPI</td>
+     </tr>
+   </table>
   
   <h1>Minimum Viable Product</h1>
   <h2>Tier 1</h1>
