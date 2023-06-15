@@ -103,6 +103,7 @@ Auth0
 <h2align="center">Wireframe</h2>
 <img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/856e82e0-80ce-48f7-97f6-05d997f20f7d">
 <img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/8a9a0b37-69b5-4970-a949-7169b9a5b120">
+<img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/c4483b49-688b-44d6-8a70-2e18076fee75">
 
 <h2 >Installation</h2>
 <h3>Node</h3>
