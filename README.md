@@ -101,7 +101,7 @@ Auth0
 
 <h5 align="center">Original Schema</h5>
 <h2align="center">Wireframe</h2>
-<img height="500px" width="100%" src="file:///Users/yolismazacarias/Downloads/WireFrame10_28.png">
+<img height="500px" width="100%" src="https://github.com/Yolisss/2.0JSCafeProject/assets/106282120/856e82e0-80ce-48f7-97f6-05d997f20f7d">
 <h2 >Installation</h2>
 <h3>Node</h3>
 I strongly recommend using a Node version manager like <a href="https://www.w3schools.com](https://github.com/nvm-sh/nvm"></a> 
